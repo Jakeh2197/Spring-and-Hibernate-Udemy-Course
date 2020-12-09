@@ -7,9 +7,12 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<!-- utilize properties file -->
+	<context:property-placeholder location="classpath:sport.properties"/>
+
     <!-- Define your beans here -->
     <bean id="myFortuneService"
-    	class="com.luv2code.springdemo.HappyFortuneService">
+    	class="com.luv2code.springdemo.RandomFortuneService">
    	</bean>
     
     <bean id="myCoach"
@@ -23,6 +26,10 @@
     	<!-- set up setter injection -->
     	<!-- this will call the setFortuneService() method in CricketCoach -->
     	<property name="fortuneService" ref="myFortuneService" />
+    	
+    	<!-- inject literal values for private fields -->
+    	<property name="emailAddress" value="${foo.email}" />
+    	<property name="team" value="${foo.team}" />
    	</bean>
     
 </beans>
