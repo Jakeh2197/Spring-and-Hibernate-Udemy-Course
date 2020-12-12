@@ -1,5 +1,8 @@
 package com.jake.springdemo;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -21,6 +24,18 @@ public class TennisCoach implements Coach {
 	
 	public TennisCoach() {
 		
+	}
+	
+	// define init method
+	@PostConstruct
+	public void init() {
+		System.out.println("Inside init method");
+	}
+	
+	// define destroy method
+	@PreDestroy
+	public void destroy() {
+		System.out.println("Inside destroy method");
 	}
 
 	@Override
