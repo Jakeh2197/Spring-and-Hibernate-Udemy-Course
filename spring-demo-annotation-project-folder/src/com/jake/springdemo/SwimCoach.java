@@ -13,7 +13,6 @@ public class SwimCoach implements Coach {
 	private String team;
 	
 	public SwimCoach(FortuneService fortuneService) {
-		super();
 		this.fortuneService = fortuneService;
 	}
 
