@@ -40,7 +40,7 @@ public class Launcher {
 				System.out.println("\n\tWhat would you like to do?");
 				System.out.println("\t1. Attack!");
 				System.out.println("\t2. Drink health potion!");
-				System.out.println("\t3. Run!\n\n\n\n\n\n\n\n\n");
+				System.out.println("\t3. Run!\n\n\n\n");
 				
 				String input = in.nextLine();
 				
