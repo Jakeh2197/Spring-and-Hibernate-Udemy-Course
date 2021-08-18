@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloWorldController {
@@ -34,6 +35,18 @@ public class HelloWorldController {
 		
 		// add the data to the model
 		model.addAttribute("message", data);
+		
+		return "helloworld";
+	}
+	
+	@RequestMapping("/processFormVersionThree")
+	public String manipulateUserDataVersionTwo(@RequestParam("studentName") String studentName, Model model) {
+		// manipulate the data
+		studentName = studentName.toUpperCase();
+		String finalChange = "Using @RequestParam: " + studentName;
+		
+		// add the data to the model
+		model.addAttribute("message", finalChange);
 		
 		return "helloworld";
 	}
