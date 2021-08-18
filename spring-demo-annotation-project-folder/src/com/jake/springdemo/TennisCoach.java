@@ -14,13 +14,13 @@ public class TennisCoach implements Coach {
 	@Qualifier("getFortuneService")
 	private FortuneService fortuneService;
 	
-/*
- 	// Constructor injection
-	@Autowired
-	public TennisCoach(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
-	}
-*/
+
+// 	// Constructor injection
+//	@Autowired
+//	public TennisCoach(FortuneService fortuneService) {
+//		this.fortuneService = fortuneService;
+//	}
+
 	
 	public TennisCoach() {
 		

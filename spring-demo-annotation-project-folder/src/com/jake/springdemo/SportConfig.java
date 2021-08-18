@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-//@ComponentScan("com.jake.springdemo")
+@ComponentScan("com.jake.springdemo")
 @PropertySource("classpath:sport.properties")
 public class SportConfig {
 	
@@ -20,6 +20,11 @@ public class SportConfig {
 	@Bean
 	public Coach swimCoach() {
 		return new SwimCoach(sadFortuneService());
+	}
+	
+	@Bean
+	public Coach tennisCoach() {
+		return new TennisCoach();
 	}
 
 }
